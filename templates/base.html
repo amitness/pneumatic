@@ -10,7 +10,9 @@
 	<link rel="author" href="{{ GOOGLE_PLUS_URL }}"/>
 	{% endif %}
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
+	{% if GOOGLE_SITE_VERIFICATION %}
+	<meta name="google-site-verification" content="{{ GOOGLE_SITE_VERIFICATION }}" />
+	{% endif %}
 	{% block meta %}{% endblock %}
 
 	<!-- Stylesheets and Web Fonts -->
