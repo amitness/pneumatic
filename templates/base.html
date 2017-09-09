@@ -6,13 +6,15 @@
 	<title>{% block title %}{% endblock %}</title>
 	<meta name="description" content="{% block description %}{% endblock %}">
 	<meta name="author" content="{{ SITE_AUTHOR }}">
+	{% if GOOGLE_PLUS_URL %}
 	<link rel="author" href="{{ GOOGLE_PLUS_URL }}"/>
+	{% endif %}
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 	{% block meta %}{% endblock %}
 
 	<!-- Stylesheets and Web Fonts -->
-	{% assets filters="scss, cssmin", output="style.min.css", "pneumatic.scss", "pygments.css" %}
+	{% assets filters="scss, cssmin", output="style.min.css", "pneumatic.scss", "pygments.css", "icomoon.css" %}
 	<link href="/{{ ASSET_URL }}" rel="stylesheet">
 	{% endassets %}
 	{% if GOOGLE_FONTS %}
@@ -21,8 +23,6 @@
 	{% if SOCIAL_ICONS %}
 	{% if FA_EMBED_CODE %}
 	<link rel="stylesheet" href="https://use.fontawesome.com/{{ FA_EMBED_CODE }}.css">
-	{% else %}
-	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 	{% endif %}
 	{% endif %}
 
