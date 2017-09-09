@@ -22,6 +22,8 @@
 	<div class="content">
 		{{ article.content }}
 	</div>
+	
+	{% include 'partials/sharebuttons.html' %}
 
 	{% if article.next_article or article.prev_article %}
 	<div id="related-articles">
