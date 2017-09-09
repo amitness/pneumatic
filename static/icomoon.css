@@ -24,10 +24,7 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.fa-feed:before {
-  content: "\e900";
-}
-.fa-rss:before {
+.fa-feed:before, .fa-rss:before {
   content: "\e900";
 }
 .fa-linkedin:before {
