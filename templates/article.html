@@ -23,8 +23,9 @@
 		{{ article.content }}
 	</div>
 	{% include 'partials/sharebuttons.html' %}
-	{% include 'partials/amazon_ads.html' %}
-
+	{% if ENABLE_AMAZON_ADS %}
+		{% include 'partials/amazon_ads.html' %}
+	{% endif%}
 	{% if article.next_article or article.prev_article %}
 	<div id="related-articles">
 		{% if article.next_article %}
