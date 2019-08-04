@@ -1,0 +1,27 @@
+<script type="text/javascript">
+function shuffle(a) {
+    var j, x, i;
+    for (i = a.length - 1; i > 0; i--) {
+        j = Math.floor(Math.random() * (i + 1));
+        x = a[i];
+        a[i] = a[j];
+        a[j] = x;
+    }
+    return a;
+}
+
+var products = ["199957950X","1617294438","1491962291", "1783980281", "1617293709",
+                "132854639X", "1633695670", "0525560882", "1593276400", "1784393878",
+                "1775093301", "0134291050"];
+
+amzn_assoc_placement = "adunit0";
+amzn_assoc_tracking_id = "amitness-20";
+amzn_assoc_ad_mode = "manual";
+amzn_assoc_ad_type = "smart";
+amzn_assoc_marketplace = "amazon";
+amzn_assoc_region = "US";
+amzn_assoc_linkid = "6825feb1253a8f0016c70df67ba71f7e";
+amzn_assoc_design = "in_content";
+amzn_assoc_asins = shuffle(products).join(",");
+</script>
+<script src="//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US"></script>
